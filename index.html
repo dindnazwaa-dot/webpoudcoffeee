@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Pour Coffe — Online Order</title>
+
+  <!-- AOS for gentle scroll animations -->
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+
+  <link rel="stylesheet" href="style.css" />
+  <meta name="theme-color" content="#5a3d36" />
+</head>
+<body>
+  <header class="site-header" data-aos="fade-down">
+    <div class="header-left">
+      <!-- Logo: replace images/logo.png with your uploaded file -->
+      <img src="images/logo.png" alt="Pour Coffe logo" class="logo" />
+      <div class="brand">
+        <h1>pour <span>coffe</span></h1>
+        <small>COFFEE SHOP • ESTD 2025</small>
+      </div>
+    </div>
+
+    <div class="header-right">
+      <button id="cart-btn" class="cart-btn" aria-label="Open cart">
+        <!-- inline cart icon (SVG) -->
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden>
+          <path d="M7 7h14l-1.5 9h-11L7 7z" stroke="#fff" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+          <circle cx="10" cy="20" r="1.6" fill="#fff"/>
+          <circle cx="18" cy="20" r="1.6" fill="#fff"/>
+        </svg>
+        <span id="cart-count" class="cart-count">0</span>
+      </button>
+
+      <a class="wa-btn" href="https://wa.me/62895333323870" target="_blank" rel="noopener">
+        Chat WA
+      </a>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO -->
+    <section class="hero">
+      <div class="hero-card" data-aos="zoom-in">
+        <h2>Welcome to Pour Coffe</h2>
+        <p>Freshly brewed — cozy taste. Pilih Dine-In atau Takeaway saat pesan.</p>
+        <a href="#menu" class="cta">Lihat Menu</a>
+      </div>
+    </section>
+
+    <!-- MENU -->
+    <section id="menu" class="menu-section">
+      <h2 class="section-title" data-aos="fade-up">Daftar Menu</h2>
+
+      <div class="menu-grid">
+        <!-- ITEM 1 -->
+        <article class="menu-card" data-id="Americano" data-price="28000" data-aos="fade-up" data-aos-delay="50">
+          <img src="images\Americano.jpg" alt="Americano" />
+          <div class="menu-body">
+            <h3>Americano</h3>
+            <p class="price">Rp 12.000</p>
+            <div class="menu-actions">
+              <button class="buy-btn">Buy Now</button>
+            </div>
+          </div>
+        </article>
+
+        <!-- ITEM 2 -->
+        <article class="menu-card" data-id="Cappuccino" data-price="20000" data-aos="fade-up" data-aos-delay="100">
+          <img src="images/Cappuccino.jpg" alt="Cappuccino" />
+          <div class="menu-body">
+            <h3>Cappuccino</h3>
+            <p class="price">Rp 20.000</p>
+            <div class="menu-actions">
+              <button class="buy-btn">Buy Now</button>
+            </div>
+          </div>
+        </article>
+
+        <!-- ITEM 3 -->
+        <article class="menu-card" data-id="mocha" data-price="30000" data-aos="fade-up" data-aos-delay="150">
+          <img src="images/mocha.jpg" alt="Mocha" />
+          <div class="menu-body">
+            <h3>Mocha</h3>
+            <p class="price">Rp 30.000</p>
+            <div class="menu-actions">
+              <button class="buy-btn">Buy Now</button>
+            </div>
+          </div>
+        </article>
+
+        <!-- ITEM 4 -->
+        <article class="menu-card" data-id="caramel-machiato" data-price="28000" data-aos="fade-up" data-aos-delay="200">
+          <img src="images/Caramel machiato.jpg" alt="Caramel Machiato" />
+          <div class="menu-body">
+            <h3>Caramel Machiato</h3>
+            <p class="price">Rp 28.000</p>
+            <div class="menu-actions">
+              <button class="buy-btn">Buy Now</button>
+            </div>
+          </div>
+        </article>
+
+        <!-- ITEM 5 -->
+        <article class="menu-card" data-id="Spanish latte" data-price="22000" data-aos="fade-up" data-aos-delay="250">
+          <img src="images/Spanish Latte.jpg" alt="Spanish Latte" />
+          <div class="menu-body">
+            <h3>Spanish Latte</h3>
+            <p class="price">Rp 22.000</p>
+            <div class="menu-actions">
+              <button class="buy-btn">Buy Now</button>
+            </div>
+          </div>
+        </article>
+
+        <!-- ITEM 6 -->
+        <article class="menu-card" data-id="Espresso" data-price="30000" data-aos="fade-up" data-aos-delay="300">
+          <img src="images/Espresso.jpg" alt="Espresso" />
+          <div class="menu-body">
+            <h3>Espresso</h3>
+            <p class="price">Rp 30.000</p>
+            <div class="menu-actions">
+              <button class="buy-btn">Buy Now</button>
+            </div>
+          </div>
+        </article>
+
+        <!-- ITEM 7 -->
+        <article class="menu-card" data-id="Frappe Caramel Machiato" data-price="35000" data-aos="fade-up" data-aos-delay="350">
+          <img src="images/Frappe Caramel Machiato.jpg" alt="Frappe Caramel Machiato" />
+          <div class="menu-body">
+            <h3>Frappe Caramel Machiato</h3>
+            <p class="price">Rp 35.000</p>
+            <div class="menu-actions">
+              <button class="buy-btn">Buy Now</button>
+            </div>
+          </div>
+        </article>
+
+        <!-- ITEM 8 -->
+        <article class="menu-card" data-id="Americano Thai Milk" data-price="25000" data-aos="fade-up" data-aos-delay="400">
+          <img src="images/Americano Thai Milk.jpg" alt="Americano Thai Milk" />
+          <div class="menu-body">
+            <h3>Americano Thai Milk</h3>
+            <p class="price">Rp 25.000</p>
+            <div class="menu-actions">
+              <button class="buy-btn">Buy Now</button>
+            </div>
+          </div>
+        </article>
+
+        <!-- ITEM 9 -->
+        <article class="menu-card" data-id="Matcha Latte" data-price="22000" data-aos="fade-up" data-aos-delay="450">
+          <img src="images/Matcha Latte.jpg" alt="Matcha Latte" />
+          <div class="menu-body">
+            <h3>Matcha Latte</h3>
+            <p class="price">Rp 22.000</p>
+            <div class="menu-actions">
+              <button class="buy-btn">Buy Now</button>
+            </div>
+          </div>
+        </article>
+
+        <!-- ITEM 10 -->
+        <article class="menu-card" data-id="Matcha Honey" data-price="24000" data-aos="fade-up" data-aos-delay="500">
+          <img src="images/Matcha Honey.jpg" alt="Matcha Honey" />
+          <div class="menu-body">
+            <h3>Matcha Honey</h3>
+            <p class="price">Rp 24.000</p>
+            <div class="menu-actions">
+              <button class="buy-btn">Buy Now</button>
+            </div>
+          </div>
+        </article>
+
+        <!-- ITEM 11 -->
+        <article class="menu-card" data-id="Milk Tea" data-price="24000" data-aos="fade-up" data-aos-delay="500">
+          <img src="images/Milk Tea.jpg" alt="Milk Tea" />
+          <div class="menu-body">
+            <h3>Milk Tea</h3>
+            <p class="price">Rp 24.000</p>
+            <div class="menu-actions">
+              <button class="buy-btn">Buy Now</button>
+            </div>
+          </div>
+        </article>
+
+        <!-- ITEM 12 -->
+        <article class="menu-card" data-id="Chocolate Milk" data-price="30000" data-aos="fade-up" data-aos-delay="550">
+          <img src="images/Chocolate Milk.jpg" alt="Chocolate Milk" />
+          <div class="menu-body">
+            <h3>Chocolate Milk</h3>
+            <p class="price">Rp 30.000</p>
+            <div class="menu-actions">
+              <button class="buy-btn">Buy Now</button>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- ORDER MODAL -->
+    <div id="order-modal" class="modal" aria-hidden="true">
+      <div class="modal-panel" role="dialog" aria-modal="true" data-aos="zoom-in">
+        <button class="close-modal" title="Close">✕</button>
+        <h3 id="modal-item">Pesan</h3>
+
+        <!-- Dine In / Take Away toggle -->
+        <div class="option-choose" id="dine-toggle" role="radiogroup" aria-label="Pilih Dine In atau Take Away">
+          <button class="dine-option active" data-value="Dine In">Dine In</button>
+          <button class="dine-option" data-value="Take Away">Takeaway</button>
+        </div>
+
+        <!-- Quantity -->
+        <div class="qty-row">
+          <label>Jumlah</label>
+          <div class="qty-controls">
+            <button id="dec-qty">−</button>
+            <span id="qty">1</span>
+            <button id="inc-qty">+</button>
+          </div>
+        </div>
+
+        <!-- Payment -->
+        <div class="payment-row">
+          <label>Pembayaran</label>
+          <div class="payment-options">
+            <label><input type="radio" name="payment" value="qris" checked> QRIS (DANA)</label>
+            <label><input type="radio" name="payment" value="cod"> Bayar di Tempat</label>
+          </div>
+        </div>
+
+        <!-- Actions -->
+        <div class="modal-actions">
+          <button id="pay-btn" class="primary">Lanjut ke Pembayaran</button>
+          <button id="wa-btn" class="secondary">Pesan via WhatsApp</button>
+        </div>
+
+        <!-- QRIS panel -->
+        <div id="qris-panel" class="qris-panel" aria-hidden="true">
+          <p class="qris-instr">Scan QR via DANA_NUMBER 0895333323870 </p>
+          <!-- Google Chart API generates QR image from text payload -->
+          <img id="qris-img" alt="QRIS DANA" src="" />
+          <p class="small-note">Setelah bayar: tekan <strong>Sudah Bayar</strong>.</p>
+          <div class="qris-actions">
+            <button id="paid-btn" class="primary">Sudah Bayar</button>
+            <button id="cancel-pay" class="secondary">Batal</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- RECEIPT (animated printed receipt) -->
+    <div id="receipt" class="receipt" aria-hidden="true">
+      <div class="receipt-inner" data-aos="fade-down">
+        <div class="receipt-header">
+          <img src="images/logo.png" alt="logo" />
+          <div>
+            <strong>Pour Coffe</strong>
+            <small>Jl. Yos Sudarso, Medan</small>
+          </div>
+        </div>
+
+        <div class="receipt-body" id="receipt-body">
+          <!-- lines inserted by JS -->
+        </div>
+
+        <div class="receipt-footer">
+          <div class="total-line">
+            <span>Total</span>
+            <strong id="receipt-total">Rp 0</strong>
+          </div>
+          <p class="pickup-note">Pesanan berhasil — tunggu di pick-up counter.</p>
+          <div class="receipt-actions">
+            <button id="close-receipt" class="primary">Tutup</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </main>
+
+  <footer class="site-footer" data-aos="fade-up">
+    <div class="footer-left">
+      <strong>Pour Coffe</strong>
+      <address>📍 Jl. Yos Sudarso, Medan</address>
+    </div>
+    <div class="footer-right">
+      <div>☎️ 0895-3333-23870</div>
+      <div><a href="https://wa.me/62895333323870" target="_blank" rel="noopener">Chat WhatsApp</a></div>
+    </div>
+  </footer>
+
+  <!-- AOS and main script -->
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    AOS.init({ duration: 700, easing: 'ease-out-cubic', once: true });
+
+    /* ---------- CONFIG ---------- */
+    const WA_NUMBER = '62895333323870'; // for wa.me link
+    const DANA_NUMBER = '0895333323870'; // shown to user and used in QR payload
+    const QR_PAYLOAD = encodeURIComponent('DANA:' + DANA_NUMBER);
+
+    /* ---------- Utilities ---------- */
+    function formatRp(n){
+      return 'Rp ' + Number(n).toLocaleString('id-ID');
+    }
+
+    /* ---------- Simple scroll animations (adds 'in' class) ---------- */
+    // (AOS handles most; kept for fallback visuals)
+
+    /* ---------- Modal & ordering logic ---------- */
+    const buyBtns = document.querySelectorAll('.buy-btn');
+    const modal = document.getElementById('order-modal');
+    const closeModalBtn = modal.querySelector('.close-modal');
+    const modalItem = document.getElementById('modal-item');
+    const dineToggle = document.getElementById('dine-toggle');
+    const qtyEl = document.getElementById('qty');
+    const incQty = document.getElementById('inc-qty');
+    const decQty = document.getElementById('dec-qty');
+    const payBtn = document.getElementById('pay-btn');
+    const waBtn = document.getElementById('wa-btn');
+    const qrisPanel = document.getElementById('qris-panel');
+    const qrisImg = document.getElementById('qris-img');
+    const paidBtn = document.getElementById('paid-btn');
+    const cancelPay = document.getElementById('cancel-pay');
+
+    const cartBtn = document.getElementById('cart-btn');
+    const cartCountEl = document.getElementById('cart-count');
+
+    const receipt = document.getElementById('receipt');
+    const receiptBody = document.getElementById('receipt-body');
+    const receiptTotal = document.getElementById('receipt-total');
+    const closeReceiptBtn = document.getElementById('close-receipt');
+
+    // in-memory cart map {id: {id,name,price,qty}}
+    let cart = {};
+
+    // current item being ordered
+    let current = { id:null, name:'', price:0, qty:1, dine:'Dine In', payment:'qris' };
+
+    // wire buy buttons
+    buyBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        const card = btn.closest('.menu-card');
+        current.id = card.dataset.id;
+        current.name = card.querySelector('h3').innerText;
+        current.price = parseInt(card.dataset.price, 10) || 0;
+        current.qty = 1;
+        current.dine = 'Dine In';
+        current.payment = 'qris';
+
+        // update modal UI
+        modalItem.innerText = `${current.name} — ${formatRp(current.price)}`;
+        qtyEl.innerText = current.qty;
+        // reset payment and hide QR panel
+        document.querySelector('input[name="payment"][value="qris"]').checked = true;
+        qrisPanel.style.display = 'none';
+        openModal();
+      });
+    });
+
+    function openModal(){
+      modal.setAttribute('aria-hidden','false');
+      modal.classList.add('open');
+      document.body.style.overflow = 'hidden';
+    }
+    function closeModal(){
+      modal.setAttribute('aria-hidden','true');
+      modal.classList.remove('open');
+      document.body.style.overflow = '';
+    }
+    closeModalBtn.addEventListener('click', closeModal);
+
+    // dine toggle
+    dineToggle.addEventListener('click', (e) => {
+      const t = e.target.closest('.dine-option');
+      if(!t) return;
+      dineToggle.querySelectorAll('.dine-option').forEach(b => b.classList.remove('active'));
+      t.classList.add('active');
+      current.dine = t.dataset.value;
+    });
+
+    // qty handlers
+    incQty?.addEventListener('click', () => { current.qty++; qtyEl.innerText = current.qty; });
+    decQty?.addEventListener('click', () => { if(current.qty>1) current.qty--; qtyEl.innerText = current.qty; });
+
+    // payment radio
+    document.querySelectorAll('input[name="payment"]').forEach(r => {
+      r.addEventListener('change', (e) => current.payment = e.target.value);
+    });
+
+    // Pay button behavior
+    payBtn.addEventListener('click', () => {
+      if(current.payment === 'qris'){
+        // generate QR via Google Chart API
+        const qrUrl = 'https://chart.googleapis.com/chart?cht=qr&chs=300x300&chl=' + QR_PAYLOAD;
+        qrisImg.src = qrUrl;
+        qrisPanel.style.display = 'block';
+        qrisPanel.setAttribute('aria-hidden','false');
+      } else {
+        // COD: add to cart and show receipt
+        addToCart(current.id, current.name, current.price, current.qty);
+        closeModal();
+        showReceipt('Bayar di Tempat');
+      }
+    });
+
+    cancelPay.addEventListener('click', () => {
+      qrisPanel.style.display = 'none';
+    });
+
+    paidBtn.addEventListener('click', () => {
+      // simulate confirmation after payment
+      addToCart(current.id, current.name, current.price, current.qty);
+      closeModal();
+      showReceipt('QRIS (DANA) — ' + DANA_NUMBER);
+    });
+
+    // WhatsApp direct order: build message and open WA
+    waBtn.addEventListener('click', () => {
+      const lines = [];
+      lines.push('Halo Pour Coffe! Saya ingin memesan:');
+      lines.push(`${current.name} x ${current.qty}`);
+      lines.push(`Tipe: ${current.dine}`);
+      lines.push(`Total: ${formatRp(current.price * current.qty)}`);
+      lines.push('Alamat: (isi alamat)');
+      const msg = encodeURIComponent(lines.join('\\n'));
+      window.open(`https://wa.me/${WA_NUMBER}?text=${msg}`, '_blank');
+    });
+
+    /* ---------- CART functions ---------- */
+    function updateCartCount(){
+      const totalCount = Object.values(cart).reduce((s,i)=> s + i.qty, 0);
+      cartCountEl.innerText = totalCount;
+    }
+
+    function addToCart(id, name, price, qty){
+      if(!id) return;
+      if(!cart[id]) cart[id] = { id, name, price, qty:0 };
+      cart[id].qty += qty;
+      updateCartCount();
+    }
+
+    // cart button: open receipt summary as quick view
+    cartBtn.addEventListener('click', () => {
+      // if empty, show quick toast then return
+      if(Object.keys(cart).length === 0){
+        alert('Keranjang kosong — tambahkan menu terlebih dahulu.');
+        return;
+      }
+      // build receipt-like summary and show
+      showReceipt('Pending (Keranjang)');
+    });
+
+    /* ---------- Receipt UI ---------- */
+    function showReceipt(paymentMethod){
+      // construct lines from last added item + cart
+      receiptBody.innerHTML = '';
+      const rows = [];
+
+      // prefer show cart if not empty else show current single item
+      if(Object.keys(cart).length > 0){
+        Object.values(cart).forEach(it => {
+          rows.push({ label: `${it.name} x ${it.qty}`, price: formatRp(it.price * it.qty) });
+        });
+      } else {
+        rows.push({ label: `${current.name} x ${current.qty}`, price: formatRp(current.price * current.qty) });
+      }
+
+      rows.push({ label: 'Tipe', price: current.dine });
+      rows.push({ label: 'Pembayaran', price: paymentMethod });
+
+      rows.forEach((r, idx) => {
+        const el = document.createElement('div');
+        el.className = 'rc-line';
+        el.innerHTML = `<span class="left">${r.label}</span><span class="right">${r.price}</span>`;
+        el.style.animationDelay = (idx * 0.12) + 's';
+        receiptBody.appendChild(el);
+      });
+
+      // compute total
+      const total = Object.keys(cart).length > 0
+        ? Object.values(cart).reduce((s,i)=> s + (i.price * i.qty), 0)
+        : (current.price * current.qty);
+      receiptTotal.innerText = formatRp(total);
+
+      receipt.setAttribute('aria-hidden','false');
+      receipt.classList.add('show');
+    }
+
+    closeReceiptBtn.addEventListener('click', () => {
+      receipt.classList.remove('show');
+      receipt.setAttribute('aria-hidden','true');
+    });
+
+    // keyboard close
+    document.addEventListener('keydown', (e) => {
+      if(e.key === 'Escape'){
+        if(modal.classList.contains('open')) closeModal();
+        if(receipt.classList.contains('show')) receipt.classList.remove('show');
+      }
+    });
+
+  </script>
+</body>
+</html>
